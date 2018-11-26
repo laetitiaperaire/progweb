@@ -1,0 +1,75 @@
+thead
+{
+	border: 2px teal solid;
+}
+
+td
+{
+	border: 2px teal solid;
+	padding-left: 2em;
+}
+
+
+table
+{
+    /* border: 2px maroon solid ; */
+	border-collapse : collapse;
+	/* text-align : center; ???? */
+	margin: auto;
+    
+}
+
+th
+{
+    background-color : navy ;
+    font-size: 1em;
+    font-family: Trebuchet MS, Arial Black, sans-serif;
+    text-align: center;
+    color: white;
+    padding: 2px 4em 2px 4em;
+    /* margin:3em 7em 3em 7em; */
+
+}
+
+@media screen and (max-width: 700px)
+{
+	th
+	{
+		padding: 2px 2em 2px 2em;
+	}
+
+	td
+	{
+		padding: 1em 1em 1em 1em;
+	}
+}
+
+.column1
+{
+	flex:1;
+}
+
+.column2
+{
+	flex:1;
+}
+
+.column3
+{
+	flex:1;
+}
+
+/*--------------------------------------------------------------------------------------------*/
+
+/*pour ne pas afficher chaque ligne (sauf celles de l'entete du tableau) */
+tr:not(.haut)
+{
+	display: none ;
+}
+
+/*mais en affichant tous les elements lignes qui sont classées continent1 */
+.continent1
+{
+	display: table-row ;
+}
+
