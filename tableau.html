@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="tableau.css" />
+
+
+<html>
+    <head>
+
+        <!---------------------------- différentes tentatives ----------------------------------------------------->
+        <script>
+            var coupoe = document.getByElementsClassName("continent1");
+
+            function visibilite(uneclasse)
+            {
+                var Ele;
+                Ele = document.getElementsByClassName(uneclasse) ;
+                if (Ele.style.display == "none")
+                {
+                    Ele.style.display = "" ;
+                } 
+                else 
+                {
+                    Ele.style.display = "none" ;
+                }
+            }
+
+            function tri_lieu(nop)
+            {
+                switch(nop)
+                {
+                    case 0 :
+                        null;
+                    case 1 :
+                        coupoe.style.display = 'none';
+                        up.style.color = 'red';
+                    case 2 :
+                        null;
+                    case 3 :
+                        null;
+                    case 4 :
+                        null;
+                    case 5 :
+                        null;
+                    default:
+                        null;
+                }
+            }
+
+            function tri_spe(k)
+            {
+            }
+        </script>
+
+        <!------------------------------------------------------------------------------------ -->
+    </head>
+    <body>
+
+
+        <!-------------------- pour faire des tests des appels des fonctions --------------------->
+        <FORM>
+        <INPUT type="button" name="nom" value= "Bouton de test" onclick="visibilite('up')">
+        </FORM>
+
+        <span onclick="visibilite('up')"> bouh ! </span>
+
+        <span class="up"> je suis du texte fantôme... </span>
+
+        <!------------------------------------------------------------------------------------ -->
+
+
+
+        <table id=”tableau_universites”>
+            <!-- catégories des colonnes dans l’ordre -->
+            <thead id=”en_haut”>
+                <tr class="haut">
+                    <th class="column1"> universite </th>
+                    <th class="column2"> pays </th>
+                    <th class="column3"> specialites insa </th>
+            
+            <!--    <th> ville </th>
+                    <th> programme associé </th>
+                    <th> langues des cours </th>
+                    <th> langues de la population </th>
+                    <th> remarques </th> -->
+                </tr>
+                <tr class="haut">
+                    <th class="column1">
+                    </th>
+
+                    <th class="column2"> 
+
+                        <FORM>
+                        <SELECT name="continent" size="1">
+                        <OPTION selected onclick="tri_lieu(0)">tous
+                        <OPTION onclick="tri_lieu(1)">continent1
+                        <OPTION onclick="tri_lieu(2)">continent2
+                        <OPTION onclick="tri_lieu(3)">continent3
+                        <OPTION onclick="tri_lieu(4)">continent4
+                        <OPTION onclick="tri_lieu(5)">continent5
+                        </SELECT>
+                        </FORM>
+
+                    </th>
+
+                    <th class="column3"> 
+
+                        <FORM>
+                        <SELECT name="specialites" size="1">
+                        <OPTION selected onclick="tri_spe(0)">toutes
+                        <OPTION onclick="tri_spe(1)">spé1
+                        <OPTION onclick="tri_spe(2)">spé2
+                        <OPTION onclick="tri_spe(3)">spé3
+                        <OPTION onclick="tri_spe(4)">spé4
+                        </SELECT>
+                        </FORM>
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- à chaque université -->
+                <tr id="lop" class="tous toutes continent1 spe1 spe2">
+                    <td> nom_u </td>
+                    <td> pays_u </td>
+                    <td> liste_spe_u </td>
+
+            <!--    <td> programme_u </td>
+                    <td> ville_u </td>
+                    <td> liste_langues_cours </td>
+                    <td> liste_langues_population </td>
+                    <td> remarques_u </td>  -->
+                </tr>
+                <tr class=" tous toutes continent2 spe1 spe3">
+                    <td> nom_univ </td>
+                    <td> pays_u </td>
+                    <td> liste_spe_u </td>
+
+            <!--    <td> programme_u </td>
+                    <td> ville_u </td>
+                    <td> liste_langues_cours </td>
+                    <td> liste_langues_population </td>
+                    <td> remarques_u </td>  -->
+                </tr>
+
+            </tbody>
+        </table>
+
+        
+
+
+    </body>
+</html>
